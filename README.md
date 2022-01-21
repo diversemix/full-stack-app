@@ -1,2 +1,11 @@
 # full-stack-app
-Example of full stack - REACT, node, postgres
+Example of a full stack app - REACT, node
+
+## TL;DR
+
+Just type `make`
+
+## frontend
+
+## backend
+
