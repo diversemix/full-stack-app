@@ -6,6 +6,8 @@ export default function router(req, res) {
     
     // default response
     res.setHeader('content-Type', 'Application/json');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
     let statusCode = 404;
     let response = JSON.stringify({
         messge: 'The server does not know how to handle this request',
