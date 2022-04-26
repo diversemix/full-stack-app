@@ -1,15 +1,16 @@
-.PHONY: all frontend backend build_frontend build_backend
+.PHONY: all frontend backend build_frontend build_backend test
 
 all: backend frontend 
 
 frontend: build_frontend
-	cd frontend && xterm  -geometry 96x24-0+0 -e npm start &
+	@cd frontend && npm start &
 
 backend : build_backend
-	cd backend && xterm  -geometry 96x24-0-0 -e npm start &
+	@cd backend &&  npm start &
 
 build_frontend:
-	cd frontend && npm i && npm run build
+	@cd frontend && npm i && npm run build
 
 build_backend:
-	cd backend && npm i 
+	@cd backend && npm i 
+
