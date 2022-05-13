@@ -1,10 +1,10 @@
-import { jest } from "@jest/globals";
-import router from "./router.js";
+import { jest } from '@jest/globals';
+import router from './router.js';
 
-describe("Function", () => {
-    it("happy day - 200", async () => {
+describe('Router', () => {
+    it('happy day - 200', async () => {
         // Arrange
-        const req = { method: "GET", url: "https://somewhere/widgets" };
+        const req = { method: 'GET', url: 'https://somewhere/widgets' };
         const res = { setHeader: jest.fn(), end: jest.fn() };
 
         // Act

@@ -1,10 +1,10 @@
-import { jest } from "@jest/globals";
+import { jest } from '@jest/globals';
 import router from './router.js';
 
-describe("Router", () => {
-    it("should defaults to 404", async () => {
+describe('Router', () => {
+    it('should defaults to 404', async () => {
         // Arrange
-        const req = { url: "flibble" };
+        const req = { url: 'flibble' };
         const res = { setHeader: jest.fn(), end: jest.fn() };
 
         // Act
