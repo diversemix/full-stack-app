@@ -15,7 +15,4 @@ What are your boundaries?
 
 ## router-happy-path-no-controller.spec.js
 
-- So this has mocked the implementation
-- But its a little tricky maybe it indicates something is wrong with the implementation?
-- What could be better about the implementation of router?
-- SOLID
+- So 
