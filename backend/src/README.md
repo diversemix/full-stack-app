@@ -19,6 +19,3 @@ What are your boundaries?
 - But its a little tricky maybe it indicates something is wrong with the implementation?
 - What could be better about the implementation of router?
 - SOLID
-
-
-** NOT talked about CAP **
