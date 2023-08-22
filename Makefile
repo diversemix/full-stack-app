@@ -1,16 +1,28 @@
-.PHONY: all frontend backend build_frontend build_backend test
+.PHONY: all frontend backend build_frontend build_backend test network
 
-all: backend frontend 
+all: network backend frontend 
 
-frontend: build_frontend
-	@cd frontend && npm start &
+network:
+	@echo Setting up...
+	-docker network create full-stack
 
-backend : build_backend
-	@cd backend &&  npm start &
+frontend: network
+	docker run -u node -d --rm \
+		-w /home/node/app \
+		-v ${PWD}/frontend:/home/node/app \
+		-p 3000:3000 \
+		--name frontend \
+		--network full-stack \
+		node:18-alpine npm start
 
-build_frontend:
-	@cd frontend && npm i && npm run build
+backend : 
+	docker run -u node -d --rm \
+		-w /home/node/app \
+		-v ${PWD}/backend:/home/node/app \
+		-p 3001:3001 \
+		--name backend \
+		--network full-stack \
+		node:18-alpine npm start
 
-build_backend:
-	@cd backend && npm i 
-
+stop:
+	docker stop frontend backend

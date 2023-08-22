@@ -6,7 +6,7 @@ export default function router(req, res) {
     
     // default response
     res.setHeader('content-Type', 'Application/json');
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
     let statusCode = 404;
     let response = JSON.stringify({

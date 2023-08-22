@@ -3,6 +3,7 @@ import { useFetch } from "react-async"
 
 function App() {  
     const headers = { Accept: "application/json" }
+    // TODO: Make host, port config values
     const { data, error, isPending } = useFetch("http://localhost:3001/widgets", {headers});
 
     var value = data;
